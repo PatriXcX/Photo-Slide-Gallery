@@ -1,4 +1,4 @@
-# Photo slide galery
+# Photo Slide Gallery
 
 ## Descripción
 
