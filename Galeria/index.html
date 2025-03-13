@@ -17,8 +17,12 @@
     </header>
     <main>
       <section class="gallery">
+        <div class="gallery__controls">
+          <button class="btn slide_left" title="Previous">&lt;</button>
+          <button class="btn slide_left" title="Next">&gt;</button>
+        </div>
         <ul class="gallery__list">
-          <li>
+          <li class="gallery_photoitem spotlight">
             <img
               class="gallery__image"
               src="./images/horse.jpg"
@@ -26,7 +30,7 @@
               title="running horse"
             />
           </li>
-          <li>
+          <li class="gallery_photoitem">
             <img
               class="gallery__image"
               src="./images/cow.jpg"
@@ -34,7 +38,7 @@
               title="running horse"
             />
           </li>
-          <li>
+          <li class="gallery_photoitem">
             <img
               class="gallery__image"
               src="./images/oso.jpg"
@@ -42,7 +46,7 @@
               title="running horse"
             />
           </li>
-          <li>
+          <li class="gallery_photoitem">
             <img
               class="gallery__image"
               src="./images/fox.jpg"
@@ -53,5 +57,6 @@
         </ul>
       </section>
     </main>
+    <div class="spacer"></div>
   </body>
 </html>
