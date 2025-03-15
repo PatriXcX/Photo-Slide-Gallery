@@ -13,6 +13,11 @@ const getspotlightedPhotoIndex = (allPhotoItems) => {
   );
 };
 
+const activateButtons = (spotlightedPhotoIndex, length) => {
+  prevBtn.disabled = spotlightedPhotoIndex === 0;
+  nextBtn.disabled = spotlightedPhotoIndex === length - 1;
+};
+
 const handleClickPrevButton = (ev) => {
   ev.preventDefault();
 
@@ -21,20 +26,19 @@ const handleClickPrevButton = (ev) => {
 
   //Qué imagen se está mostrando
 
-  const spotlightedPhotoIndex = getspotlightedPhotoIndex(allPhotoItems);
+  let spotlightedPhotoIndex = getspotlightedPhotoIndex(allPhotoItems);
 
   //Quitar la clase spotlight
   if (spotlightedPhotoIndex > 0) {
     allPhotoItems[spotlightedPhotoIndex].classList.remove("spotlight");
 
     //A la anterior poner la clase spotlight
-    allPhotoItems[spotlightedPhotoIndex - 1].classList.add("spotlight");
-  }
-};
+    spotlightedPhotoIndex--;
 
-const activateButtons = (spotlightedPhotoIndex, length) => {
-  prevBtn.disable = spotlightedPhotoIndex === 0;
-  nextBtn.disable = spotlightedPhotoIndex === length - 1;
+    allPhotoItems[spotlightedPhotoIndex].classList.add("spotlight");
+
+    activateButtons(spotlightedPhotoIndex, allPhotoItems.length);
+  }
 };
 
 const handleClickNextvButton = (ev) => {
@@ -49,12 +53,16 @@ const handleClickNextvButton = (ev) => {
 
   const allPhotoItems = getPhotoItems();
 
-  const spotlightedPhotoIndex = getspotlightedPhotoIndex(allPhotoItems);
+  let spotlightedPhotoIndex = getspotlightedPhotoIndex(allPhotoItems);
 
   if (spotlightedPhotoIndex < allPhotoItems.length - 1) {
     allPhotoItems[spotlightedPhotoIndex].classList.remove("spotlight");
 
-    allPhotoItems[spotlightedPhotoIndex + 1].classList.add("spotlight");
+    spotlightedPhotoIndex++;
+
+    allPhotoItems[spotlightedPhotoIndex].classList.add("spotlight");
+
+    activateButtons(spotlightedPhotoIndex, allPhotoItems.length);
   }
 };
 
