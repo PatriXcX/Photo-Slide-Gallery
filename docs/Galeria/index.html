@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Molle&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <title>Gallery web component</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Gallery</h1>
+    </header>
+    <main>
+      <section class="gallery">
+        <div class="gallery__controls">
+          <button class="js__prevBtn btn slide_left" title="Previous">
+            &lt;
+          </button>
+          <button class="js__nextBtn btn slide_left" title="Next">&gt;</button>
+        </div>
+        <ul class="gallery__list">
+          <li class="js__photo gallery_photoitem">
+            <img
+              class="gallery__image"
+              src="./images/cat.jpg"
+              alt="orange resting cat"
+              title="orange cat"
+            />
+          </li>
+          <li class="js__photo gallery_photoitem spotlight">
+            <img
+              class="gallery__image"
+              src="./images/horse.jpg"
+              alt="running horse in black and white"
+              title="running horse"
+            />
+          </li>
+          <li class="js__photo gallery_photoitem">
+            <img
+              class="gallery__image"
+              src="./images/cow.jpg"
+              alt="brown cow portrait in a green landscape"
+              title="Brow cow"
+            />
+          </li>
+          <li class="js__photo gallery_photoitem">
+            <img
+              class="gallery__image"
+              src="./images/oso.jpg"
+              alt="polar bear in the snow saying hi"
+              title="Polar bear"
+            />
+          </li>
+          <li class="js__photo gallery_photoitem">
+            <img
+              class="gallery__image"
+              src="./images/fox.jpg"
+              alt="picture of a fox in the wild"
+              title="Fox in the wild"
+            />
+          </li>
+          
+        </ul>
+      </section>
+    </main>
+    <div class="spacer"></div>
+    <script src="./js/main.js"></script>
+
+    </script>
+  </body>
+</html>
