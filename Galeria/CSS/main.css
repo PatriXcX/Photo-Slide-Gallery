@@ -40,11 +40,12 @@ body {
     justify-content: center; /* Asegura que las imágenes estén centradas */
     align-items: center;
     width: 90%;
-    max-width: 800px;
+    max-width: 900px;
     background-color: black;
     padding: 0.8rem;
     border-radius: 10px;
-   position: relative;
+    position: relative;
+ 
 
 }
 
@@ -60,6 +61,7 @@ body {
 .gallery__image {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .spacer {
@@ -69,7 +71,7 @@ body {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
 
     body {
         justify-content: flex-start; 
@@ -129,7 +131,7 @@ body {
  
  .gallery .spotlight{
     display: block;
-    transform: scale(0.8);
+    transform: scale(0.7);
     z-index: 1;
 
  }
@@ -178,9 +180,9 @@ body {
     display: block;
     position: absolute;
     top: 1rem; bottom: 1rem;
-    left: 1rem; right: 1rem;
+    left: 1.5rem; right: 1rem;
     transform: translateX(-19.5vw) perspective(30vw) rotateY(45deg) translateX(1vw) scale(0.45) ;
-
+    
   }
 
   
@@ -190,6 +192,9 @@ body {
     display: block;
     position: absolute;
     top: 1rem; bottom: 1rem;
-    left: 1rem; right: 1rem;
+    left: 1rem; right: 1.5rem;
     transform: translateX(19.5vw) perspective(30vw) rotateY(-45deg) translateX(-1vw) scale(0.45) ;
+   
   }
+
+ 
