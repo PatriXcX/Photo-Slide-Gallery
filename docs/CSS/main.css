@@ -5,7 +5,6 @@
     padding: 0;
 }
 
-
 body {
     background-color: #014545;
     display: flex;
@@ -14,17 +13,13 @@ body {
     align-items: center; 
     min-height: 100vh; 
     text-align: center;
-   margin-bottom: 50px;
-    padding-top: 50px;
-}
+   }
 
 .header {
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 1rem 2rem;
-    margin-top: 20px;
-    
-   
+    margin-top: 10px;
 }
 
 .header .header__title {
@@ -34,24 +29,23 @@ body {
 }
 
 .gallery {
-   margin-bottom: auto;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Asegura que las imágenes estén centradas */
+    justify-content: center; 
     align-items: center;
-    width: 90%;
+    width: 100%;
     max-width: 900px;
     background-color: black;
     padding: 0.8rem;
     border-radius: 10px;
     position: relative;
- 
-
-}
+    overflow: hidden; 
+    }
 
 .gallery__list {
     
-    gap: 15px; /* Espacio entre imágenes */
+    gap: 10px; 
     list-style: none;
     width: 100%;
     padding: 0;
@@ -59,52 +53,22 @@ body {
 }
 
 .gallery__image {
-    width: 100%;
-    height: auto;
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    margin: 0 auto; 
     border-radius: 10px;
-}
-
-.spacer {
-    flex-grow: 1; /* Este div ocupará el espacio sobrante */
-    margin-top: 20px;
-}
-
-
-
-@media (max-width: 768px) {
-
-    body {
-        justify-content: flex-start; 
-        padding-top: 20px; 
-        height: auto; 
-    }
-
-    .header {
-        font-size: 1.2rem; 
-        margin-bottom: 10px; 
-    }
-
-   
-
-    .gallery {
-        width: 95%; /* Reducir el ancho para que no se desborde */
-        max-width: 300px; /* Evita que la galería sea demasiado grande */
-    }
-    .gallery__image {
-        max-width: 100%; /* Que las imágenes ocupen el ancho completo */
-        height: auto;
-}
 }
 
 @media (min-width: 400px) and (max-width: 1999px) {
     body {
-        justify-content: flex-start; /* Evita que todo quede demasiado abajo */
-        padding-top: 15px; /* Menos espacio arriba */
-        height: 100vh; /* Ajuste de altura */
+        justify-content: flex-start; 
+        padding-top: 15px; 
+        height: 100vh; 
     }
 
     .header {
-        margin-bottom: 50px; /* Separación controlada del contenido */
+        margin-bottom: 50px; 
         font-size: 1.5rem;
     }
 
@@ -115,12 +79,12 @@ body {
         justify-content: center;
         width: 90%;
         max-width: 900px;
-        margin: auto; /* Centra correctamente */
+        margin: auto; 
     }
 }
 
 .gallery .gallery__list img{
-    width: 100%;
+    width: 95%;
 }
 
 
@@ -133,7 +97,6 @@ body {
     display: block;
     transform: scale(0.7);
     z-index: 1;
-
  }
 
  .gallery .gallery__controls {
@@ -164,8 +127,7 @@ body {
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
-  
-}
+  }
 
 .slide_left:hover {
     box-shadow: inset 0 0 0 50px #60a97f;
@@ -182,10 +144,8 @@ body {
     top: 1rem; bottom: 1rem;
     left: 1.5rem; right: 1rem;
     transform: translateX(-19.5vw) perspective(30vw) rotateY(45deg) translateX(1vw) scale(0.45) ;
-    
-  }
+      }
 
-  
   .gallery .gallery__list .gallery_photoitem.spotlight + .gallery_photoitem{
    /*Next sibiling*/
 
@@ -194,7 +154,54 @@ body {
     top: 1rem; bottom: 1rem;
     left: 1rem; right: 1.5rem;
     transform: translateX(19.5vw) perspective(30vw) rotateY(-45deg) translateX(-1vw) scale(0.45) ;
-   
-  }
+     }
 
- 
+  @media (max-width: 768px) {
+
+    body {
+        justify-content: flex-start; 
+        padding-top: 150px; 
+        height: auto; 
+    }
+
+    .header {
+        font-size: 1.2rem; 
+        margin-bottom: 50px; 
+    }
+
+    .gallery {
+        width: 95%; 
+        max-width: 300px; 
+    }
+    .gallery__image {
+        max-width: 100%; 
+        height: auto;
+}
+
+.btn {
+    font-size: 16px;  
+    padding: 6px 12px;  
+    border-width: 3px;  
+}
+}
+
+@media (max-width: 480px) {
+    .btn {
+        font-size: 14px;
+        padding: 5px 10px;
+        border-width: 2px;
+    }
+}
+
+@media (min-width: 1199px) {
+    .gallery {
+        max-width: 1200px;  
+        margin-left: 5%;  
+        margin-right: 5%;  
+        margin-bottom: 15px;
+        }
+
+        .gallery .gallery__list img{
+            width: 85%;
+        }
+    }
