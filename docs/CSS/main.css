@@ -160,8 +160,10 @@ body {
 
     body {
         justify-content: flex-start; 
-        padding-top: 150px; 
-        height: auto; 
+        padding-top: 145px; 
+       
+        margin-top: 5px;
+
     }
 
     .header {
