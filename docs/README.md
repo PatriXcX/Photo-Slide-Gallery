@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este repositorio contiene un componente web hecho con HTML CSS y JS que muestra una galería de imágenes
+Este repositorio contiene un componente web hecho con HTML, CSS avanzado (transformaciones, transiciones) y JS que muestra una galería de imágenes obtenidas de la API Unsplashed.
 
 ## Funcionalidades
 
@@ -47,23 +47,6 @@ Este proyecto consiste en un componente web que puedes visualizar por medio del 
      npm start
      ```
    - Esto abrirá el proyecto en un servidor local, generalmente accesible en `http://localhost:3000`.
-
-## Publicar en GitHub Pages
-
-1. **Hacer un Push a GitHub**:
-   - Asegúrate de haber subido el proyecto a tu repositorio de GitHub con:
-     ```bash
-     git push origin main
-     ```
-
-2. **Configurar GitHub Pages**:
-   - Ve a tu repositorio en GitHub.
-   - Dirígete a `Settings` -> `Pages`.
-   - En la sección "Source", selecciona la rama que deseas publicar (por ejemplo, `main`) y la carpeta raíz (`/root`).
-   - Guarda los cambios y obtendrás un enlace en el que se publicará tu componente.
-
-   Por ejemplo:
-   - **Enlace a GitHub Pages**: [https://tu-usuario.github.io/nombre-del-repositorio/](https://tu-usuario.github.io/nombre-del-repositorio/)
 
 ## Notas
 
